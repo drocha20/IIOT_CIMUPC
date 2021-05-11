@@ -1,0 +1,76 @@
+[
+    {
+        "id": "d067e57b.8243d8",
+        "type": "tab",
+        "label": "WS_MA",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "638caf6.507ead",
+        "type": "mqtt in",
+        "z": "d067e57b.8243d8",
+        "name": "",
+        "topic": "3C:61:05:0E:07:48/Granja_MA/+",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "8f06bb8a.86ad6",
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "3b7f926c.477d76"
+            ]
+        ]
+    },
+    {
+        "id": "3b7f926c.477d76",
+        "type": "debug",
+        "z": "d067e57b.8243d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1d3b0a09.feee96",
+        "type": "comment",
+        "z": "d067e57b.8243d8",
+        "name": "Datos granja Mas Almar",
+        "info": "A continuación, recibimos los datos de la granja de Mas Almar a traves de WiFi. Principalmente, recibimos información de la granja (temperatura y humedad para el control de ventilación) y vacío y temperatura de la cuba fija.",
+        "x": 160,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8f06bb8a.86ad6",
+        "type": "mqtt-broker",
+        "name": "broker_iiot",
+        "broker": "iiot-upc.gleeze.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": ""
+    }
+]
